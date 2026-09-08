@@ -79,7 +79,7 @@ footer { margin-top: 54px; padding-top: 18px; color: var(--faint); border-top: 1
       <h1>我的网站看板</h1>
       <p class="subtitle">把做过的工具集中在这里。一个入口，快速回到每个分析工作台。</p>
     </div>
-    <div class="count"><strong>03</strong> 个网站</div>
+    <div class="count"><strong>05</strong> 个网站</div>
   </header>
 
   <section class="cards" id="project-cards" aria-label="我的网站列表"></section>
@@ -104,6 +104,18 @@ const projects = [
     description: '从K线图提取技术信号，结合市场与宏观事件，生成行情驱动因素和后续情景推演。',
     tags: ['K线分析', '视觉解析', '宏观归因'], status: '已上线',
     siteUrl: 'https://wanghahaniu.github.io/kline-attribution-site/', repoUrl: 'https://github.com/wanghahaniu/kline-attribution-site'
+  },
+  {
+    icon: '⌘', accent: '#3dd68c', category: 'AI HARNESS', name: 'DeepSeek Harness',
+    description: '本地运行的 AI 智能体工作台，用于调用 DeepSeek Harness 并管理个人自动化任务。',
+    tags: ['AI 智能体', '本地工具', 'DeepSeek'], status: '本地运行',
+    siteUrl: 'http://127.0.0.1:3080/', repoUrl: ''
+  },
+  {
+    icon: '✦', accent: '#f5c842', category: 'API PLATFORM', name: '橙子API',
+    description: 'AI 模型 API 服务入口，集中访问和管理常用的模型接口。',
+    tags: ['API', 'AI 模型', '开发工具'], status: '在线',
+    siteUrl: 'https://open.hitick.top/', repoUrl: ''
   }
 ];
 
@@ -117,7 +129,7 @@ cards.innerHTML = projects.map(project => `
     <div class="tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
     <div class="actions">
       <a class="button primary" href="${project.siteUrl}" target="_blank" rel="noopener noreferrer">打开网站 ↗</a>
-      <a class="button secondary" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">查看源码</a>
+      ${project.repoUrl ? `<a class="button secondary" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">查看源码</a>` : '<span class="button secondary" aria-disabled="true">暂无源码</span>'}
     </div>
   </article>
 `).join('');
