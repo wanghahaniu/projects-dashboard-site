@@ -9,6 +9,8 @@
 - [K线行情智能归因与宏观推演系统](https://wanghahaniu.github.io/kline-attribution-site/) · [查看源码](https://github.com/wanghahaniu/kline-attribution-site)
 - [DeepSeek Harness](http://127.0.0.1:3080/) · 本地服务，无公开源码入口
 - [橙子API](https://open.hitick.top/) · 在线 API 服务
+- [美伊局势日报](https://wanghahaniu.github.io/us-iran-daily/) · 每日局势简报
+- [期货信号看板](http://110.42.220.207:8000/#bu2610) · 期货行情与交易信号
 
 ## 本地预览
 
